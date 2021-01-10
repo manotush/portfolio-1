@@ -1,0 +1,81 @@
+.about{
+    padding-bottom: 2em;
+&__bio-image{
+    margin: 1.5em auto;
+    width: 50%;
+    height: 40vh;
+    background:linear-gradient(to right, rgba($secondary-color, 0.2), rgba($text-color, 0.2)), url(../img/model.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    h2{
+        padding-top:3em;
+        font-size: 3rem;
+        font-weight: 500;
+        color: $tartiary-color;
+        text-align: center;
+    }
+    p{
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: $ash-color;
+        text-align: justify;
+    }
+}
+.jobs{
+   margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13em, 1fr));
+    grid-gap:1em;
+    width: 80%;
+    &__job{
+        background: $ash-color;
+        border-bottom: 3px solid tomato;
+        padding: 1em;
+        h2{
+            font-size: 2rem;
+            font-weight: 500;
+            color: $tartiary-color;
+            padding:0.3em 0;
+        }
+        h3{
+            font-size: 1.3rem;
+            font-weight: 400;
+            color:$secondary-color;
+            text-transform: uppercase;
+        }
+        h6{
+            font-size: 1.2rem;
+            font-weight: 400;
+            color:$primary-color;
+            padding: 0.2em 0;
+        }
+        p{
+            font-size: 1.1rem;
+            font-weight: 300;
+            color:$text-color;
+            padding: 0.2em 0;
+        }
+    }
+}
+}
+@include media-md{
+  .about{
+    &__bio-image{
+        width: 70%;
+        h2{padding-top:5em;
+    }
+}
+    .jobs{
+        margin: 14em auto;
+    }
+  }
+  .social-icons{
+    display:flex;
+    flex-direction: column;
+    left: 0;
+  }
+  footer{
+    transform: rotate(90deg) translate(-3em, -6.5em);
+}
+}

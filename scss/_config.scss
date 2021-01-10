@@ -1,0 +1,29 @@
+$primary-color:rgba(21, 21, 218, 0.493);
+$secondary-color:rgb(19, 175, 236);
+$icon-color:crimson;
+$dark-color:rgba(4, 24, 78, 0.8);
+$ash-color:#333;
+$text-color:#ddd;
+$tartiary-color:tomato;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@mixin transition-ease {
+    transition: all 0.4s ease;
+}
+
+@function text-color($color){
+    @if(lightness($color) > 40%){
+        @return #333;
+    }@else{
+        @return #ddd;
+    }
+}
+
+@mixin media-md {
+    @media only screen and (max-width:991px){
+        @content;
+    }
+}

@@ -1,0 +1,45 @@
+.home{
+    height:100%;
+    width:100%;
+    padding-top: 40vh;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    background:linear-gradient(to right, rgba($secondary-color, 0.2), rgba($text-color, 0.2)), url(../img/model.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    h2{
+        font-size:3em;
+        color: text-color($secondary-color);
+        padding: 0.5rem;
+    }
+    h2:first-child{
+        color: text-color($ash-color);
+    }
+    &__name{
+        font-size:4.5em;
+        font-weight: 200;
+        padding:1rem;
+        color: $dark-color;
+        border-bottom: 2px solid text-color($primary-color);
+    
+    &--last{
+        color:text-color($icon-color);
+        font-weight: 700;
+    }
+}
+}
+@include media-md{
+    .home{
+        padding-top: 35vh;
+        background-position: top;
+        h2{
+            font-size: 1em;
+            padding: 0.2em;
+        }
+        &__name{
+            font-size:2.5em;
+        }
+    }
+}
